@@ -15,5 +15,5 @@ pub fn x1_grad(x1: f64, x2: f64) -> f64 {
 }
 
 pub fn x2_grad(x1: f64, x2: f64) -> f64 {
-    6. * x2 + 3. * x1 - 2. 
+    6. * x2 + 3. * x1 - 2.
 }

@@ -1,6 +1,7 @@
 use crate::function_info::f;
 
 mod coordinate_descent;
+mod fastest_descent;
 mod function_info;
 mod gradient_descent;
 
@@ -19,5 +20,12 @@ fn main() {
         "[x1, x2] = {:?}; f(x1, x2) = {:.3}",
         m_grad,
         f(*m_grad.get(0).expect(""), *m_grad.get(1).expect(""))
+    );
+    println!("Метод наискорейшего спуска:");
+    let m_fastest = fastest_descent::find_min(1., 3., eps);
+    println!(
+        "[x1, x2] = {:?}; f(x1, x2) = {:.3}",
+        m_fastest,
+        f(m_fastest[0], m_fastest[1])
     );
 }
